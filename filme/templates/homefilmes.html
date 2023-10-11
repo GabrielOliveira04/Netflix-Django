@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+
+HomeFilmes Netiflix
+{% endblock %}
+
+{% block content %}
+<div class="py-10">
+    <h1>HomeFilmes</h1>
+    {% for filme in lista_filmes %}
+
+     <ul>
+        <li>{{filme}}</li>
+        
+        <li>{{filme.descricao}}</li>
+        <li><img src="{{filme.thumb.url}}"></li>
+
+     </ul>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
